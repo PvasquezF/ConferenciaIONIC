@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <div class="ion-padding">
+        <ion-list>
+            <ion-item *ngFor="let data of datos">
+                <ion-label>
+                    {{data.text}}
+                </ion-label>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
